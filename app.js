@@ -56,4 +56,4 @@ app.use(indexRoutes);
 
 //=====================
 //Server listener
-app.listen(process.env.PORT, precess.env.IP);
+app.listen(process.env.PORT, process.env.IP);
