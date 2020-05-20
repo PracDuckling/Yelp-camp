@@ -1,0 +1,29 @@
+<%-include("../partials/header") %>
+
+	<div class="row">
+		<h1 style="text-align: center; text-transform: uppercase;">Add New Capmsite</h1>
+			<div style="width:30%; margin: 25px auto;">
+				<form action="/campsites" method="POST">
+					<div class="form-group">
+						<input class="form-control" type="text" name="newCampsite" placeholder="Name here">
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="number" name="price" placeholder="Cost/Night" min="100.0" step="1">
+					</div>
+					<div class="form-group">
+						<input class="form-control" type="text" name="imagesrc" placeholder="link of the image here">
+					</div>
+					<div class="form-group">
+						<textarea class="form-control" name="description" placeholder="add description"></textarea>
+					</div>
+					<div class="form-group">
+						<button class="btn btn-lg btn-primary btn-block">Submit</button>
+					</div>
+				</form>
+				<a class="btn btn-default" href="/campsites" >Go Back</a>
+			</div>	
+	</div>
+
+
+
+<%-include("../partials/footer") %>

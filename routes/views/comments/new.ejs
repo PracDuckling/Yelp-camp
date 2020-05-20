@@ -1,0 +1,22 @@
+<%-include("../partials/header") %>
+
+    <div class="row">
+        <h1 style="text-align: center; text-transform: uppercase;">Comment on <%= camps.name %> </h1>
+        <div style="width:30%; margin: 25px auto;">
+            <form action="/campsites/<%=camps._id %>/comment" method="POST">
+                 <div class="form-group">
+                    <textarea class="form-control" name="comment[text]" placeholder="add description"></textarea>
+                </div>
+                               
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+            <a class="btn btn-default" href="/campsites">Go Back</a>
+        </div>
+
+    </div>
+
+
+
+<%-include("../partials/footer") %>
