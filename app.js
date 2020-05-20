@@ -21,12 +21,13 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-mongoose.connect("mongodb+srv://Shantanu:79kzg37q2ZxpASf@cluster0-dcfeg.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect(process.env.DATABASEURL, {
 		useNewUrlParser:true,
 		useUnifiedTopology:true,
 		useFindAndModify: false,
 		useCreateIndex: true
 });
+
 app.locals.moment = require("moment");
 
 // passport configration
@@ -57,3 +58,6 @@ app.use(indexRoutes);
 //=====================
 //Server listener
 app.listen(process.env.PORT, process.env.IP);
+// app.listen(3000,function(){
+// 	console.log("server online");
+// })
