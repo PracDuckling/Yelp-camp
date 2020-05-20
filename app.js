@@ -21,7 +21,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
-mongoose.connect("mongodb://localhost/yelp_campv12",{
+mongoose.connect("mongodb+srv://Shantanu:79kzg37q2ZxpASf@cluster0-dcfeg.mongodb.net/test?retryWrites=true&w=majority", {
 		useNewUrlParser:true,
 		useUnifiedTopology:true,
 		useFindAndModify: false,
@@ -31,7 +31,7 @@ app.locals.moment = require("moment");
 
 // passport configration
 app.use(require("express-session")({
-	secret:"Jai Shree Ram",
+	secret:"Some Random String",
 	resave:false,
 	saveUninitialized:false
 }));
@@ -56,6 +56,4 @@ app.use(indexRoutes);
 
 //=====================
 //Server listener
-app.listen(3000, function(){
-	console.log("The Yelp Camp Server Has Started");
-});
+app.listen(process.env.PORT, precess.env.IP);
