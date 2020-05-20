@@ -7,7 +7,7 @@ var middleware = require("../middleware");
 //root route
 router.get("/", function (req, res) {
     //res.render("/views/campsite/index");
-    res.render("../views/landing");
+    res.render("landing");
 });
 
 

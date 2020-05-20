@@ -56,4 +56,6 @@ app.use(indexRoutes);
 
 //=====================
 //Server listener
-app.listen(process.env.PORT, process.env.IP);
+app.listen(3000,function(){
+	console.log("server started");
+});
